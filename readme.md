@@ -1,5 +1,7 @@
 ![image info](./images/title.png)
 
+# WARNING, this is a pre-release! This means that the files and the guide are essentially untested and there is no guaranty that everything will smoothly assemble as intended (or as a worst case, at all!)    
+
 An ergonomic 54-key hand wired split keyboard running QMK on the Elite-C microcontroller, living inside its 3D-printed case.
 
 ![image info](./images/fisk2.png)
@@ -102,3 +104,7 @@ Some that deserve to be mentioned above all else are:
    
 **Note:** In case I have forgotten to mention someone or a reference to an author's work, please let me know and I will happily correct it.
 
+## License
+Copyright © 2022 @vvhg1
+
+These designs are distributed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License 

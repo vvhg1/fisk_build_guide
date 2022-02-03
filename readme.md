@@ -17,28 +17,32 @@ Keyboard Maintainer: [@vvhg1](https://github.com/vvhg1)
 QMK firmware files are at [https://github.com/vvhg1/fisk.git](https://github.com/vvhg1/fisk.git) 
 
 **Note:** There is a layout tester PDF in the images folder (A4 format).
-## Parts
+## Parts Needed
 ### 3D-printed parts
 - left and right bodies
 - left and right bottoms
 - 1 plug per rotary encoder
 - (optional) tavel case
-### Other parts needed
+### Other parts
 - 2 Elite-C microcontrollers
 - 2 128x32 OLED displays
 - (optional) up to two rotary encoders, the plugs were designed for Alps EC11
 - 54 MX compatible switches
 - 52 1u keycaps and two 1.5u keycaps
 - diodes
-- 2 RJ22 (aka RJ9) connectors of this type: TE Connectivity Part# 1-338084-3
+- 2 RJ22 (aka RJ9 aka RJ10) connectors of this type: TE Connectivity Part# 1-338084-3
 - 12 M3 self threading screws (up to 5.6mm head dia, up to 2.1mm head height, up to 8mm length (c10mm total length))
-- cable with RJ22 4/4  (aka RJ9) connectors
+- cable with RJ22 4/4  (aka RJ9 aka RJ10) connectors
 - wire
 ## Tools
 - soldering equipment
 - hot glue
 - screw driver
 
+**Note:** The prints need to be cleaned from any printing supports. Make sure the slot for the MCU is properly cleaned out and dry fit the MCU before installing switches.
+
+## Switches
+The switches should click right in. Some hot glue might be advisable to secure them.
 ## Matrix Layout
 Wire the matrix according to these schematics:
 ![image info](./images/matrix.png)    
@@ -54,6 +58,7 @@ The rotary encoder has two pins on one side and three on the other side. The two
 #define ENCODERS_PAD_B \
     { B5 }
 ```
+Install the plug for the rotary encoder. Rounding off the bottom corners a little might help in case the plug is too oppositional. The encoder is then pushed into the plug from the bottom, secure with hot glue.
 ## OLED Displays
 ![image info](./images/OLED.png)    
 First unsolder the four pins on the OLED as they are in the way. It should look like in the image above. Then solder four wires in their place and solder the wires to the MCU according to the labels.    
@@ -67,7 +72,7 @@ Image source: [QMK](https://github.com/qmk/qmk_firmware/blob/master/docs/feature
     
 
 
-Wire the RJ females jack and insulate the pins (keep it slender for the next step):   
+Solder wires to the RJ females jack and insulate the pins (keep it slender for the next step):   
 ![image info](./images/RJ_female.png)     
 
 Then thread the cables through here:    
@@ -83,7 +88,7 @@ Image source: [deskthority.net/wiki/Elite-C](https://deskthority.net/wiki/Elite-
 
      
 
-When soldering the wires to the microcontroller, make sure the solder on the backside is as flat as possible as there is no space to spare inside the case.   
+When soldering the wires to the microcontroller, make sure the solder on the backside is as flat as possible as there is no room to spare inside the case.   
 The microcontroller is mounted into the case with the flat side facing away from the switches. Secure it with a blob of hot glue at the back of the board as a backstop so it can't get pushed in when plugging in the USB.   
      
 
@@ -96,14 +101,14 @@ This keyboard draws inspiration from many sources and would not have been possib
 Some that deserve to be mentioned above all else are:
 - the famous Kyria by Thomas Baart, [splitkb.com](https://splitkb.com)
 
-    The aggressive column stagger, the thumb cluster and the general shape are heavily influenced by the Kyria. The use and placement of a rotary encoder also comes from the various Kyria layouts floating around. Even the two extra index finger keys draw inspiration from here, as there was enough space in my 3D mock-up due to the different MCU placement and I just love dedicated keys for brackets.
+    The aggressive column stagger, the thumb cluster and the general shape are inspired by the Kyria. The use and placement of a rotary encoder also comes from the various Kyria layouts floating around. Even the two extra index finger keys draw inspiration from here, as there was enough space in my 3D mock-up due to the different MCU placement and I just love dedicated keys for brackets.
     Would I not have gone down the route of designing a keyboard from scratch, the Kyria would have been one of the most tempting options of all the split keyboards I have come across in my research.
     
 - the [Architeuthis dux](https://github.com/tapioki/cephalopoda/tree/main/Architeuthis%20dux) by [@tapioki](https://github.com/tapioki)
 
-    Going one step beyond a mere column stagger and adding column splay immedietely made sense to me and seemed like the next logical step. The even more extreme pinky stagger was a welcome encouragement in the design process of the physical layout (apparently my pinkies are rather short) and the column splay turned out to feel very natural.
+    Going one step beyond a mere column stagger and adding column splay immideately made sense to me and seemed like the next logical step. The even more extreme pinky stagger was a welcome encouragement in the design process of the physical layout and the column splay turned out to feel very natural.
     
-- the [Lotus58 case design](https://www.thingiverse.com/thing:4768218) by Matt James.
+- the [Lotus58 case design](https://www.thingiverse.com/thing:4768218) by Matt James, a welcome breather from the usual blocky, vertical wall case designs.
 
    
 **Note:** In case I have forgotten to mention someone or a reference to an author's work, please let me know and I will happily correct it.

@@ -4,7 +4,7 @@
 
 ## This project is not for the inexperienced builder!
 
-### v0.1
+### v2.0
 
 **Note:** I am by no means a CAD engineer, so expect an absolute dog's dinner when working with the open file formats!
 
